@@ -14,13 +14,9 @@
 1. Узнать __ID__ блока - найти его можно заглянув в __Google Dev Tools (Inspect Mode)__ -> http://prntscr.com/k20uuo
 2. Добавить в CSS данную строку, в соотвествии с ID блока, который был найден:
 
- ```css
- #cover ~ section element_v_bloke {
-   changes:#fff;
+```css
+ #cover ~ section элемент_в_блоке {
+   изменения
    }
-   ```
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
 ```
+###### `~ section` отвечает за переход в контент блока, соотвественно возможность редактировать все, что находится в нём.
