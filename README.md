@@ -15,11 +15,11 @@
 
 2. Добавить в CSS данную строку, в соотвествии с ID блока, который был найден:
 
- `css
- #cover ~ section елемент_в_блоке {
-   изменения;
+ ```css
+ #cover ~ section element_v_bloke {
+   changes:#fff;
    }
-   `
+   ```
 
 ```javascript
 var s = "JavaScript syntax highlighting";
