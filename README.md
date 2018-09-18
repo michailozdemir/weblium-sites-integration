@@ -62,3 +62,59 @@
 ---
 
 ## __Массовое скачивание ресурсов с сайта с помощью скрипта__
+
+1. Установить __Ruby__ на свое устройство (Windows, Mac). [Ссылка на установку](https://www.ruby-lang.org/en/documentation/installation/)
+2. Создать себе файл `index.rb` и в него вставить данный скрипт.
+```ruby
+require 'json'
+require 'rest-client'
+require "open-uri"
+
+
+$login = '’
+$password = ''
+$host = 'https://weblium.com'
+$website_id = '5b5089fd1b27c5002389fbea'
+
+
+def auth_data
+    JSON.parse(RestClient::Request.execute(url: "#{$host}/api/v0.1.0/auth/login",
+                                           method: :post,
+                                           headers: { content_type: 'application/json' },
+                                           payload: { username: $login , password: $password },
+                                           verify_ssl: false))
+end
+
+def get_resource_list
+    JSON.parse(RestClient::Request.execute(url: "#{$host}/api/website/#{$website_id}/resource",
+    method: :get,                              
+    headers: {
+      content_type: 'application/json',
+      Authorization: "Bearer #{auth_data['token']}",
+      params: {
+        skip: '0',
+        limit: '200',
+        "filter[storage]": 'gcs' 
+      }
+    },
+    verify_ssl: false
+    ))
+end
+
+def download_image(url, output_name)
+  open(url) do |f|
+    File.open(output_name, 'wb') do |file|
+      file.puts f.read
+    end
+  end
+  # `curl '#{url}' > #{output_name}`
+end
+
+  get_resource_list['data'].each do |resource|
+    puts resource
+    download_image("https:#{resource['url']}", "#{resource['name']}.#{resource['mimeType'].gsub('image/','')}")
+  end
+```
+3. В полях `login` и `passoword` ввести данные своего аккаунта на Weblium, который имеет админские права (доступ в Backoffice). 
+4. В поле `website_id` ввести __ID__ сайта. Найти его можно в ссылке сайта в Backoffice. [Пример](https://backoffice.weblium.site/#/websites/5ba0f621f5c8650025ddfed5/info)
+__5ba0f621f5c8650025ddfed5__ - ID сайта
