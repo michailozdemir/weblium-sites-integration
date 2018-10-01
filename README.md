@@ -174,7 +174,7 @@ __5ba0f621f5c8650025ddfed5__ - ID сайта
 6. После того, как путь указан верно, в терминале запустить скрипт командой `ruby index.rb`.
 
    Стоит учесть, что скрипт грузит файлы туда, где он находится. То есть желательно создать какую-то папку, куда вставить данный скрипт и соотвественно путь к файлу будет немного другой.
-![Code example GIF](https://storage.jumpshare.com/preview/MsTL52MMxxTSYpkwbxHyaoJvmr5Q5ezxy8OnnkL6Pr-QiqpJadlODO2OXdqf_l2nFAIsmuz-qweXhXjFzsn0dFNlSmh0egFbdyHzE6LvoMAI4av1wcwKsmUDuTGzHRrg)
+![Code example GIF](https://i.imgur.com/1xk8qcf.gif)
 > Автор раздела: Michail Ozdemir
 
 ---
