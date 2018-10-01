@@ -310,5 +310,6 @@ jQuery(document).ready(function() {
   `HTML - Before </body>`  
   `CSS - CSS`  
   `jQuery - Before </body>`  
+
   Не забываем обернуть код в нужные тэги `(<script></script>)`
 > Автор раздела: Michail Ozdemir
