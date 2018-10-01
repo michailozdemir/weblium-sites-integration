@@ -304,5 +304,6 @@ jQuery(document).ready(function() {
 
 Пример работы кнопки [здесь](https://bootdevice.com.ua/).
 
-  Стоит учесть, что если вы хотите вставить кнопку через __Extra Block__, то HTML, CSS и jQuery код стоит вставлять именно разделы блока. Если же через общую интеграцию на сайте, то `HTML - Before </body>`, `CSS - CSS`, `jQuery - Before </body>. Не забываем обернуть код в нужные тэги (<script></script>)`
+  Стоит учесть, что если вы хотите вставить кнопку через __Extra Block__, то HTML, CSS и jQuery код стоит вставлять именно разделы блока. Если же через общую интеграцию на сайте, то `HTML - Before </body>`, `CSS - CSS`, `jQuery - Before </body>`.
+  Не забываем обернуть код в нужные тэги `(<script></script>)`
 > Автор раздела: Michail Ozdemir
