@@ -283,27 +283,25 @@ dataLayer.push({
 3. Добавить скрипт для инициализации и работоспособности кнопки.
 
 ```js
-
-		jQuery(document).ready(function(){   
-			jQuery(window).scroll(function () {
-				if (jQuery(this).scrollTop() > 600) {
-					jQuery('.scroll__top__button').css('opacity', '1');
-				} else {
-					jQuery('.scroll__top__button').css('opacity', '0');
-				}
-			});
-		 
-			jQuery('.scroll__top__button').click(function () {
-				jQuery('body,html').animate({
-					scrollTop: 0
-				}, 1800);
-				return false;
-			});
-		});
+jQuery(document).ready(function() {
+	jQuery(window).scroll(function() {
+		if (jQuery(this).scrollTop() > 600) {
+			jQuery('.scroll__top__button').css('opacity', '1');
+		} else {
+			jQuery('.scroll__top__button').css('opacity', '0');
+		}
+	});
+	jQuery('.scroll__top__button').click(function() {
+		jQuery('body,html').animate({
+			scrollTop: 0
+		}, 1800);
+		return false;
+	});
+});
 ```
 
 4. Так как данный скрипт использует __jQuery__ библиотеку, стоит подгрузить её в корень сайта. В __`<head>`__ вставляем данный код `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>`
 
-Пример работы кнопки [здесь](https://bootdevice.com.ua/)
-Стоит учесть, что если вы хотите вставить кнопку через __Extra Block__, то HTML, CSS и jQuery код стоит вставлять именно разделы блока. Если же через общую интеграцию на сайте, то `HTML - Before </body>`, `CSS - CSS`, `jQuery - Before </body>. Не забываем обернуть код в нужные тэги (<script></script>)`
+Пример работы кнопки [здесь](https://bootdevice.com.ua/).
+   Стоит учесть, что если вы хотите вставить кнопку через __Extra Block__, то HTML, CSS и jQuery код стоит вставлять именно разделы блока. Если же через общую интеграцию на сайте, то `HTML - Before </body>`, `CSS - CSS`, `jQuery - Before </body>. Не забываем обернуть код в нужные тэги (<script></script>)`
 > Автор раздела: Michail Ozdemir
