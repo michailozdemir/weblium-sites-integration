@@ -5,6 +5,8 @@
 #### [__Добавление GeoPlugin для подмены номеров на сайте относительно региона пользователя__](#Добавление-geoplugin-для-подмены-номеров-на-сайте-относительно-региона-пользователя-1)
 #### [__Массовое скачивание ресурсов с сайта с помощью скрипта__](#Массовое-скачивание-ресурсов-с-сайта-с-помощью-скрипта-1)
 ####  [__Настройка отслеживания ивентов на отправку формы/клик кнопки Google Tag Manager__](#Настройка-отслеживания-ивентов-на-отправку-формыклик-кнопки-google-tag-manager-1)
+
+####  [__Кнопка скролла наверх (Scroll to Top Button)__](#Настройка-отслеживания-ивентов-на-отправку-формыклик-кнопки-google-tag-manager-1)
 ---
 
 ## Как добавить интеграцию к определённому блоку или странице?
@@ -238,4 +240,70 @@ dataLayer.push({
 ```
 
 Подробнее о событиях [`onclick`](https://www.w3schools.com/jsref/event_onclick.asp), [`onsubmit`](https://www.w3schools.com/jsref/event_onsubmit.asp) и [`querySelector`](https://www.w3schools.com/jsref/met_document_queryselector.asp)
+> Автор раздела: Michail Ozdemir
+
+---
+
+## __Кнопка скролла наверх (Scroll to Top Button)__
+
+Как добавить кнопку для обратного скролла наверх на сайте?
+
+1. Добавить кнопку в __HTML__ раздел сайта. Вариантов несколько. Либо в __`Before </body>`__, либо через __Extra Block__
+
+```html
+<div class="scroll__top__button" title="Back to top" style="opacity: 1;">➤</div>
+```
+
+2. Добавить стили для кнопки. Стилизировать можно как угодно, но в данном случае используется самый обыкновенный пример.
+```css
+.scroll__top__button {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    cursor: pointer;
+    opacity:0;
+    transition: all 0.4s ease-in;
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #fafafa;
+    color: #2468B3;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+.scroll__top__button:hover {
+    background-color: #2468B3;
+    color: #fff;
+}
+```
+
+3. Добавить скрипт для инициализации и работоспособности кнопки.
+
+```js
+
+		jQuery(document).ready(function(){   
+			jQuery(window).scroll(function () {
+				if (jQuery(this).scrollTop() > 600) {
+					jQuery('.scroll__top__button').css('opacity', '1');
+				} else {
+					jQuery('.scroll__top__button').css('opacity', '0');
+				}
+			});
+		 
+			jQuery('.scroll__top__button').click(function () {
+				jQuery('body,html').animate({
+					scrollTop: 0
+				}, 1800);
+				return false;
+			});
+		});
+```
+
+4. Так как данный скрипт использует __jQuery__ библиотеку, стоит подгрузить её в корень сайта. В __`<head>`__ вставляем данный код `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>`
+
+Пример работы кнопки [здесь](https://bootdevice.com.ua/)
+Стоит учесть, что если вы хотите вставить кнопку через __Extra Block__, то HTML, CSS и jQuery код стоит вставлять именно разделы блока. Если же через общую интеграцию на сайте, то `HTML - Before </body>`, `CSS - CSS`, `jQuery - Before </body>. Не забываем обернуть код в нужные тэги (<script></script>)`
 > Автор раздела: Michail Ozdemir
