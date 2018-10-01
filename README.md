@@ -300,7 +300,8 @@ jQuery(document).ready(function() {
 });
 ```
 
-4. Так как данный скрипт использует __jQuery__ библиотеку, стоит подгрузить её в корень сайта. В __`<head>`__ вставляем данный код `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>`
+4. Так как данный скрипт использует __jQuery__ библиотеку, стоит подгрузить её в корень сайта.  
+В __`<head>`__ вставляем данный код `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>`
 
 Пример работы кнопки [здесь](https://bootdevice.com.ua/).
 ![Scroll to Top Button Example](https://i.imgur.com/kdVMQql.gif)
