@@ -248,7 +248,7 @@ dataLayer.push({
 
 Как добавить кнопку для обратного скролла наверх на сайте?
 
-1. Добавить кнопку в __HTML__ раздел сайта. Вариантов несколько. Либо в __`Before </body>`__, либо через __Extra Block__
+1. Добавить кнопку в __HTML__ раздел сайта. Вариантов несколько. Либо в __`Before </body>`__, либо через `__Extra Block__`
 
 ```html
 <div class="scroll__top__button" title="Back to top" style="opacity: 1;">➤</div>
@@ -274,6 +274,7 @@ dataLayer.push({
     font-size: 30px;
     text-decoration: none;
 }
+
 .scroll__top__button:hover {
     background-color: #2468B3;
     color: #fff;
