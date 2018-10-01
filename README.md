@@ -123,3 +123,67 @@ __5ba0f621f5c8650025ddfed5__ - ID сайта
 
    Стоит учесть, что скрипт грузит файлы туда, где он находится. То есть желательно создать какую-то папку, куда вставить данный скрипт и соотвественно путь к файлу будет немного другой.
 ![Code example GIF](https://storage.jumpshare.com/preview/MsTL52MMxxTSYpkwbxHyaoJvmr5Q5ezxy8OnnkL6Pr-QiqpJadlODO2OXdqf_l2nFAIsmuz-qweXhXjFzsn0dFNlSmh0egFbdyHzE6LvoMAI4av1wcwKsmUDuTGzHRrg)
+> Автор раздела: Michail Ozdemir
+
+---
+
+## __Настройка отслеживания ивентов на заполнение формы/клик кнопки Google Tag Manager__
+
+Определитесь, что нужно отслеживать. Кнопка или отправка формы. Начнём с кнопки.
+
+### Для того, что бы настроить отслеживание event'a на клик кнопки, нужно:
+
+1. Найти кнопку с помощью `querySelector` и внести её в переменную, которую мы назовём `button`
+```js
+var button = document.querySelector('#cover ~ section a');
+```
+
+2. После того, как кнопка была найдена, нужно навесить функцию на кнопку, которая будет срабатывать при клике.
+Сделаем это с помощью события `onclick`.
+```js
+button.onclick = function () {
+
+}
+```
+
+3. Внутри функции добавляем действие, которые выслал клиент.
+```js
+button.onclick = function () {
+dataLayer.push({
+		'event': 'Event_landing_page',
+		'eventCategory': 'order',
+		'eventAction': 'form_send',
+	});
+}
+```
+
+4. Готовый скрипт выглядит вот так:
+```js
+var button = document.querySelector('#cover ~ section a');
+button.onclick = function () {
+dataLayer.push({
+		'event': 'Event_landing_page',
+		'eventCategory': 'order',
+		'eventAction': 'form_send',
+	});
+}
+```
+
+
+### Для того, что бы настроить отслеживание event'a на отправку формы, нужно:
+
+Все выглядит практически так же как и в настройках для кнопки, только лишь событие будет `onsubmit`, а не `onclick` как в примере выше. Так же, стоит заменить название переменной, что бы избежать одинаковых названий.
+
+```js
+var form = document.querySelector('#cover ~ section form');
+form.onclick = function () {
+dataLayer.push({
+		'event': 'Event_landing_page',
+		'eventCategory': 'order',
+		'eventAction': 'form_send',
+	});
+}
+```
+
+Подробнее о событиях [`onclick`](https://www.w3schools.com/jsref/event_onclick.asp) и [`onsubmit`](https://www.w3schools.com/jsref/event_onsubmit.asp)
+> Автор раздела: Michail Ozdemir
