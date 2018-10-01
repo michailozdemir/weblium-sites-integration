@@ -302,6 +302,5 @@ jQuery(document).ready(function() {
 
 4. Так как данный скрипт использует __jQuery__ библиотеку, стоит подгрузить её в корень сайта. В __`<head>`__ вставляем данный код `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>`
 
-Пример работы кнопки [здесь](https://bootdevice.com.ua/).
-   Стоит учесть, что если вы хотите вставить кнопку через __Extra Block__, то HTML, CSS и jQuery код стоит вставлять именно разделы блока. Если же через общую интеграцию на сайте, то `HTML - Before </body>`, `CSS - CSS`, `jQuery - Before </body>. Не забываем обернуть код в нужные тэги (<script></script>)`
+Пример работы кнопки [здесь](https://bootdevice.com.ua/).   Стоит учесть, что если вы хотите вставить кнопку через __Extra Block__, то HTML, CSS и jQuery код стоит вставлять именно разделы блока. Если же через общую интеграцию на сайте, то `HTML - Before </body>`, `CSS - CSS`, `jQuery - Before </body>. Не забываем обернуть код в нужные тэги (<script></script>)`
 > Автор раздела: Michail Ozdemir
