@@ -185,7 +185,7 @@ __5ba0f621f5c8650025ddfed5__ - ID сайта
 
 ### Для того, что бы настроить отслеживание event'a на клик кнопки, нужно:
 
-1. Найти кнопку с помощью `querySelector` и внести её в переменную, которую мы назовём `button`
+1. Найти кнопку в DOM'e сайта с помощью `document.querySelector` и внести её в переменную, которую мы назовём `button`
 ```js
 var button = document.querySelector('#cover ~ section a');
 ```
@@ -237,5 +237,5 @@ dataLayer.push({
 }
 ```
 
-Подробнее о событиях [`onclick`](https://www.w3schools.com/jsref/event_onclick.asp) и [`onsubmit`](https://www.w3schools.com/jsref/event_onsubmit.asp)
+Подробнее о событиях [`onclick`](https://www.w3schools.com/jsref/event_onclick.asp), [`onsubmit`](https://www.w3schools.com/jsref/event_onsubmit.asp) и [`querySelector`](https://www.w3schools.com/jsref/met_document_queryselector.asp)
 > Автор раздела: Michail Ozdemir
