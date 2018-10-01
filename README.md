@@ -39,6 +39,59 @@
 ## __Добавление GeoPlugin для подмены номеров на сайте относительно региона пользователя__
 
 1. На странице создается __Extra Block__. Во вкладку __JS__ добавляем [код](https://codepen.io/anon/pen/NLObmV)
+```js
+const telMap = {
+	RU: {
+		string: ' +7 (495) 204-15-09',
+		number: '+74952041509'
+	},
+	UA: {
+		string: '+38 (044) 207-39-55',
+		number: '+380442073955'
+	},
+	BY: {
+		string: ' +7 (495) 204-15-09',
+		number: '+74952041509'
+	},
+	KZ: {
+		string: '+7 (727) 350-76-33',
+		number: '+77273507633'
+	},
+	EE: {
+		string: '+372 884-00-64',
+		number: '+3728840064'
+	},
+	LV: {
+		string: '+372 884-00-64',
+		number: '+3728840064'
+	},
+	LT: {
+		string: '+372 884-00-64',
+		number: '+3728840064'
+	},
+	GE: {
+		string: '+38 (044) 207-39-55',
+		number: '+380442073955'
+	},
+	rest: {
+		string: '+372 884-00-64 ',
+		number: '+3728840064'
+	},
+}
+const setTel = (code) => {
+	if (Object.keys(telMap).includes(code)) {
+		document.querySelector('#header ~ header a[class*="header__button__"] span span:nth-child(2)').innerHTML = telMap[code].string
+		document.querySelector('#header ~ header a[class*="header__button__"]').setAttribute('href', `tel:${telMap[code].number}`)
+		return
+	}
+	document.querySelector('#header ~ header a[class*="header__button__"] span span:nth-child(2)').innerHTML = telMap.rest.string
+	document.querySelector('#header ~ header a[class*="header__button__"]').setAttribute('href', `tel:${telMap.rest.number}`)
+}
+fetch('https://api.ipgeolocation.io/ipgeo?apiKey=731931cff73f4eaaaea4d6773bbc0298').then(result => result.json().then(({
+	country_code2
+}) => setTel(country_code2)))
+```
+
 2. В конце данного кода есть путь по которому обращается этот скрипт, то есть на что он будет применятся. Будь то кнопка или номер телефона где-то на странице. 
 ```css
 #header ~ header a[class*="header__button__"]
