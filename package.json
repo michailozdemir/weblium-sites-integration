@@ -1,0 +1,30 @@
+{
+  "name": "weblium-sites-integration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michailozdemir/weblium-sites-integration.git"
+  },
+  "author": "Michail Ozdemir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michailozdemir/weblium-sites-integration/issues"
+  },
+  "homepage": "https://github.com/michailozdemir/weblium-sites-integration#readme",
+  "devDependencies": {
+    "vuepress": "^0.14.4"
+  },
+
+	"scripts": {
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs"
+	}
+}
