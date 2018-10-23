@@ -1,0 +1,4 @@
+node_modules/*
+package.json
+docs/.vuepress/styles/palette.styl
+.vuepress/config.js
