@@ -1,5 +1,5 @@
 ---
-sidebar: auto
+sidebarDepth: 2
 ---
 
 # Кастомная интеграция для блоков и сайтов на Weblium
