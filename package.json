@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,5 @@
   "homepage": "https://github.com/michailozdemir/weblium-sites-integration#readme",
   "devDependencies": {
     "vuepress": "^0.14.4"
-  },
-
-	"scripts": {
-		"docs:dev": "vuepress dev docs",
-		"docs:build": "vuepress build docs"
-	}
+  }
 }
