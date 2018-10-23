@@ -1,4 +1,3 @@
-const path = require('path')
 module.exports = {
   base: '/weblium-sites-integration/',
   title: 'Weblium Sites Integration',
