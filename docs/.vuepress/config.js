@@ -7,7 +7,8 @@ themeConfig: {
     nav: [
       { text: 'Главная', link: '/' },
       { text: 'Содержание', link: 'info.md' },
-      { text: 'GitHub', link: 'https://github.com/michailozdemir/weblium-sites-integration/blob/master/README.md' },
+    { text: 'Виджеты', link: 'widgets.md' },
+      { text: 'GitHub', link: 'https://github.com/michailozdemir/weblium-sites-integration/' },
     ] 
   }
 }
