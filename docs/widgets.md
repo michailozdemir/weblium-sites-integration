@@ -63,7 +63,6 @@ dataLayer.push({
 ```
 
 Подробнее о событиях [`onclick`](https://www.w3schools.com/jsref/event_onclick.asp), [`onsubmit`](https://www.w3schools.com/jsref/event_onsubmit.asp) и [`querySelector`](https://www.w3schools.com/jsref/met_document_queryselector.asp)
-> Автор раздела: Michail Ozdemir
 
 ---
 
@@ -149,4 +148,3 @@ fbq('track', 'Lead');
 
 Подробнее о событиях [`onclick`](https://www.w3schools.com/jsref/event_onclick.asp), [`onsubmit`](https://www.w3schools.com/jsref/event_onsubmit.asp) и [`querySelector`](https://www.w3schools.com/jsref/met_document_queryselector.asp)
 Подробнее о [Facebook Pixel событиях (отслеживание конверсий)](https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking) 
-> Автор раздела: Michail Ozdemir
