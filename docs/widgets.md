@@ -53,7 +53,7 @@ dataLayer.push({
 
 ```js
 var form = document.querySelector('#cover ~ section form');
-form.onclick = function () {
+form.onsubmit = function () {
 dataLayer.push({
 		'event': 'Event_landing_page',
 		'eventCategory': 'order',
