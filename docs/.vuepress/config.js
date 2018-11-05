@@ -1,3 +1,4 @@
+
 module.exports = {
   base: '/weblium-sites-integration/',
   title: 'Weblium Sites Integration',
@@ -23,6 +24,6 @@ sidebar: {
           children: ['widgets']
         }
       ]
-    } 
+    }
   }
 }
