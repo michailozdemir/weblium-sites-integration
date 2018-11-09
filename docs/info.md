@@ -245,4 +245,3 @@ jquery.min.js"></script>`
   `jQuery - Before </body>`  
 
   Не забываем обернуть код в нужные тэги `(<script></script>)`
-  Я на всех всех писос ложил :tada:
