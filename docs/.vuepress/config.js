@@ -2,7 +2,7 @@
 module.exports = {
   base: '/weblium-sites-integration/',
   title: 'Weblium Sites Integration',
-  description: 'Кастомная интеграция для блоков и сайтов на Weblium',
+  description: 'Кастомная интеграци для блоков и сайтов на платформе Weblium',
 
 themeConfig: {
     nav: [
