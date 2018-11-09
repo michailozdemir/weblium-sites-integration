@@ -147,9 +147,4 @@ fbq('track', 'Lead');
 
 Что бы удостоверится в правильной установке Facebook Pixel, используется специальное расширение для Chrome - [Facebook Pixel Helper](https://chrome.google.com/webstore/detail/facebook-pixel-helper/fdgfkebogiimcoedlicjlajpkdmockpc).  Расширение отображает как и успешную установку, так и ошибки которые могли возникнуть после нее.
 
-Подробнее о событиях [`onclick`](https://www.w3schools.com/jsref/event_onclick.asp), [`onsubmit`](https://www.w3schools.com/jsref/event_onsubmit.asp) и [`querySelector`](https://www.w3schools.com/jsref/met_document_queryselector.asp)   
-<<<<<<< HEAD
-Подробнее о [Facebook Pixel событиях (отслеживание конверсий)](https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking)
-=======
-Подробнее о [Facebook Pixel событиях (отслеживание конверсий)](https://developers.facebook.com/docs/facebook-pixel/implementation/conversion-tracking) 
->>>>>>> 87e5144901c61f4a9ab8215b8ec473715daf1ac0
+Подробнее о событиях [`onclick`](https://www.w3schools.com/jsref/event_onclick.asp), [`onsubmit`](https://www.w3schools.com/jsref/event_onsubmit.asp) и [`querySelector`](https://www.w3schools.com/jsref/met_document_queryselector.asp)
