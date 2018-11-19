@@ -1,29 +1,40 @@
-
 module.exports = {
-  base: '/weblium-sites-integration/',
-  title: 'Weblium Sites Integration',
-  description: 'Кастомная интеграци для блоков и сайтов на платформе Weblium',
+    base: '/weblium-sites-integration/',
+    title: 'Weblium Sites Integration',
+    description: 'Кастомная интеграция для блоков и сайтов на платформе Weblium',
 
-themeConfig: {
-    nav: [
-      { text: 'Главная', link: '/' },
-      { text: 'Содержание', link: 'info.md' },
-    { text: 'Виджеты', link: 'widgets.md' },
-      { text: 'GitHub', link: 'https://github.com/michailozdemir/weblium-sites-integration/' },
+    themeConfig: {
+        nav: [
+            {
+                text: 'Главная',
+                link: '/'
+            },
+            {
+                text: 'Содержание',
+                link: 'info.md'
+            },
+            {
+                text: 'Виджеты',
+                link: 'widgets.md'
+            },
+            {
+                text: 'GitHub',
+                link: 'https://github.com/michailozdemir/weblium-sites-integration/'
+            },
     ],
-sidebar: {
-      '/': [
-        {
-          title: 'Содержание',
-          collapsable: false,
-          children: ['info']
+        sidebar: {
+            '/': [
+                {
+                    title: 'Содержание',
+                    collapsable: false,
+                    children: ['info']
         },
-        {
-          title: 'Виджеты',
-          collapsable: false,
-          children: ['widgets']
+                {
+                    title: 'Виджеты',
+                    collapsable: false,
+                    children: ['widgets']
         }
       ]
+        }
     }
-  }
 }
