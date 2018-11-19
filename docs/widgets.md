@@ -138,7 +138,7 @@ fbq('track', 'Lead');
 
 ```js
 var form = document.querySelector('#cover ~ section form');
-form.onclick = function () {
+form.onsubmit = function () {
 fbq('track', 'Lead');
 }
 ```
